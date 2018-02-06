@@ -1,4 +1,4 @@
-FROM mmunro/bloatstack:0.1.1-xenial
+FROM mmunro/bloatstack:0.1.2-xenial
 
 ENV SERVER_NAME=tellervo
 
