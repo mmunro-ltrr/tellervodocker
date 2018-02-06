@@ -8,7 +8,7 @@ RUN set -e \
   && echo '%sudo ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers \
   && wget --directory-prefix=/tmp/ http://www.tellervo.org/tmp/tellervo-server-1.3.3.deb \
   && dpkg --install /tmp/tellervo-server-1.3.3.deb \
-  && sudo -u tellervo tellervo-server --auto-configure \
+  && tellervo-server --auto-configure \
   && echo "ServerName ${SERVER_NAME}" >> /etc/apache2/conf-enabled/servername.conf
 
 # Setup Supervisord to run Apache and Postgres
