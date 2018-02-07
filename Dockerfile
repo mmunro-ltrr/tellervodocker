@@ -11,7 +11,7 @@ RUN set -e \
   && echo "ServerName ${SERVER_NAME}" >> /etc/apache2/conf-enabled/servername.conf \
   && wget --directory-prefix=/tmp/ http://www.tellervo.org/tmp/tellervo-server-1.3.3.deb \
   && dpkg --install /tmp/tellervo-server-1.3.3.deb \
-  && cp /tmp/tellervo-server /usr/bin/tellervo-server
+  && cp /tmp/tellervo-server /usr/bin/tellervo-server \
   && tellervo-server --auto-configure
 
 # Setup Supervisord to run Apache and Postgres
